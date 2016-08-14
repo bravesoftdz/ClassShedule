@@ -1,0 +1,34 @@
+inherited WorldSectionFrame: TWorldSectionFrame
+  Height = 153
+  Width = 426
+  AutoSize = True
+  ClientHeight = 153
+  ClientWidth = 426
+  DesignLeft = 757
+  DesignTop = 209
+  inline GlobalRowColFrame1: TGlobalRowColFrame[0]
+    Left = 22
+  end
+  inline GlobalFiltersFrame1: TGlobalFiltersFrame[1]
+    Height = 80
+    Top = 80
+    ClientHeight = 80
+    TabOrder = 1
+    inherited MiniSortingFrame1: TMiniSortingFrame
+      Left = 70
+      DesignLeft = 658
+      DesignTop = 348
+    end
+    inherited ExtendedFilterFrame1: TExtendedFilterFrame
+      Left = 70
+      Top = 40
+      TabOrder = 1
+      DesignLeft = 665
+      DesignTop = 219
+      inherited MiniFilterFrame1: TMiniFilterFrame
+        DesignLeft = 275
+        DesignTop = 248
+      end
+    end
+  end
+end

@@ -1,0 +1,29 @@
+object ScheduleDM: TScheduleDM
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 67
+  HorizontalOffset = 951
+  VerticalOffset = 285
+  Width = 226
+  object IBConnection_Main: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'D:\EMP.FDB'
+    KeepConnection = False
+    Password = 'masterkey'
+    Transaction = SQLTransaction_Main
+    UserName = 'SYSDBA'
+    CharSet = 'UTF8'
+    LogEvents = []
+    left = 40
+    top = 16
+  end
+  object SQLTransaction_Main: TSQLTransaction
+    Active = False
+    Action = caNone
+    Database = IBConnection_Main
+    left = 152
+    top = 16
+  end
+end
