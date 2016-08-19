@@ -1,0 +1,28 @@
+object FireBird: TFireBird
+  OldCreateOrder = False
+  Height = 154
+  HorizontalOffset = 360
+  VerticalOffset = 356
+  Width = 292
+  object IBConnect: TIBConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'D:/EMP.FDB'
+    KeepConnection = False
+    Password = 'masterkey'
+    Transaction = SQLTransact
+    UserName = 'SYSDBA'
+    CharSet = 'UTF8'
+    Options = []
+    left = 40
+    top = 24
+  end
+  object SQLTransact: TSQLTransaction
+    Active = True
+    Action = caNone
+    Database = IBConnect
+    Options = []
+    left = 152
+    top = 24
+  end
+end

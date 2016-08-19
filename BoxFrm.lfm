@@ -1,0 +1,51 @@
+object BoxFrame: TBoxFrame
+  Left = 381
+  Height = 78
+  Top = 76
+  Width = 300
+  Align = alBottom
+  AutoSize = True
+  ClientHeight = 78
+  ClientWidth = 300
+  LCLVersion = '1.6.0.4'
+  object FieldName: TLabel
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 57
+    BorderSpacing.Around = 7
+    Caption = 'FieldName'
+    ParentColor = False
+  end
+  object DBLComboBox: TDBLookupComboBox
+    AnchorSideLeft.Control = FieldName
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 72
+    Height = 23
+    Top = 5
+    Width = 221
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 7
+    DataSource = CellEditor.DataSource
+    ListFieldIndex = 0
+    ListSource = ListSource
+    LookupCache = False
+    TabOrder = 0
+  end
+  object ListSource: TDataSource
+    DataSet = SQLQuery
+    left = 24
+    top = 32
+  end
+  object SQLQuery: TSQLQuery
+    FieldDefs = <>
+    Database = FireBird.IBConnect
+    Transaction = FireBird.SQLTransact
+    Options = []
+    Params = <>
+    left = 104
+    top = 32
+  end
+end
