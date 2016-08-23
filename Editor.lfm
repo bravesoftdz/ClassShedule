@@ -1,7 +1,7 @@
 object CellEditor: TCellEditor
-  Left = 569
+  Left = 276
   Height = 304
-  Top = 100
+  Top = 344
   Width = 400
   AutoSize = True
   BorderStyle = bsSingle
@@ -11,6 +11,7 @@ object CellEditor: TCellEditor
   Constraints.MinWidth = 400
   OnClose = FormClose
   Position = poDefault
+  ShowHint = True
   LCLVersion = '1.6.0.4'
   object EditPanel: TGroupBox
     Left = 0
@@ -36,6 +37,7 @@ object CellEditor: TCellEditor
     object SaveBtn: TBitBtn
       Left = 0
       Height = 42
+      Hint = 'Принять изменения'
       Top = 0
       Width = 78
       AutoSize = True
@@ -178,6 +180,7 @@ object CellEditor: TCellEditor
     object CancelBtn: TBitBtn
       Left = 88
       Height = 42
+      Hint = 'Отменить изменения'
       Top = 0
       Width = 104
       AutoSize = True

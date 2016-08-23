@@ -5,10 +5,11 @@ unit NameFrm;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls;
+  Classes, SysUtils, FileUtil, Forms, Controls;
 
 type
   TNamedFrame = class(TFrame)
+  published
     constructor Create(TheOwner: TWinControl);
   end;
 
@@ -16,7 +17,6 @@ implementation
 
 constructor TNamedFrame.Create(TheOwner: TWinControl);
 begin
-  Tag := TheOwner.Tag;
   inherited Create(TheOwner);
   Parent := TheOwner;
   Name := '_' + IntToStr(Cardinal(Self));

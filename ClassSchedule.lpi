@@ -42,7 +42,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="9">
+    <Units Count="11">
       <Unit0>
         <Filename Value="ClassSchedule.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -80,23 +80,40 @@
         <ResourceBaseClass Value="Form"/>
       </Unit5>
       <Unit6>
-        <Filename Value="EditFrm.pas"/>
+        <Filename Value="MiniFilterFrm.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="EditFrame"/>
+        <ComponentName Value="MiniFilterFrame"/>
         <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit6>
       <Unit7>
         <Filename Value="NameFrm.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="NamedFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit7>
       <Unit8>
+        <Filename Value="EditFrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EditFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit8>
+      <Unit9>
         <Filename Value="BoxFrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="BoxFrame"/>
         <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit8>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="FilterFrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FilterFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit10>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

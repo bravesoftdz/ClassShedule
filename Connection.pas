@@ -5,10 +5,11 @@ unit Connection;
 interface
 
 uses
-  Classes, SysUtils, IBConnection, sqldb, FileUtil;
+  Classes, IBConnection, sqldb;
 
 type
   TFireBird = class(TDataModule)
+  published
     IBConnect: TIBConnection;
     SQLTransact: TSQLTransaction;
   end;

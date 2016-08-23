@@ -7,8 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lazcontrols, Main, Connection, Metadata, Catalog, Editor, EditFrm,
-  NameFrm, BoxFrm;
+  Forms, lazcontrols, Main, Connection, Metadata, Catalog, Editor,
+  MiniFilterFrm, NameFrm, EditFrm, BoxFrm, FilterFrm;
 
 {$R *.res}
 

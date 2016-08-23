@@ -10,6 +10,7 @@ uses
 
 type
   TEditFrame = class(TNamedFrame)
+  published
     FieldEditor: TDBEdit;
     FieldName: TLabel;
     constructor Create(TheOwner: TWinControl; aColumn: TColumns);
@@ -22,8 +23,8 @@ implementation
 constructor TEditFrame.Create(TheOwner: TWinControl; aColumn: TColumns);
 begin
   inherited Create(TheOwner);
-  FieldName.Caption := aColumn.SecondName;
-  FieldEditor.DataField := aColumn.FirstName;
+  FieldName.Caption := aColumn.CaptionField;
+  FieldEditor.DataField := aColumn.DataField;
 end;
 
 end.

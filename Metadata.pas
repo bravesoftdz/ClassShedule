@@ -6,17 +6,17 @@ interface
 
 type
   TColumns = record
-    FirstName: string;
-    SecondName: string;
-    TableKey: string;
-    PrmKey: string;
-    FrgKey: string;
+    DataField: string;
+    CaptionField: string;
+    ListField: string;
+    KeyTable: string;
+    KeyField: string;
     Primary: boolean;
   end;
 
   TTable = record
-    FrstName: string;
-    ScndName: string;
+    NameTable: string;
+    CaptionTable: string;
     Columns: array of TColumns;
   end;
 
@@ -24,9 +24,10 @@ type
   public
     Tables: array of TTable;
   private
-    procedure AddTable(FName, SName: string);
-    procedure AddColumn(FName, SName: string);
-    procedure AddKey(FName, SName, TKey, PKey, FKey: string);
+    procedure AddTable(aNameTable, aCaptionTable: string);
+    procedure AddColumn(aDataField, aCaptionField: string);
+    procedure AddKey(aDataField, aCaptionField, aListField, aKeyTable,
+      aKeyField: string);
   end;
 
 var
@@ -34,37 +35,38 @@ var
 
 implementation
 
-procedure DBMetadata.AddTable(FName, SName: string);
+procedure DBMetadata.AddTable(aNameTable, aCaptionTable: string);
 begin
   SetLength(Tables, Length(Tables) + 1);
   with Tables[High(Tables)] do begin
-    FrstName := FName;
-    ScndName := SName;
+    NameTable := aNameTable;
+    CaptionTable := aCaptionTable;
   end;
 end;
 
-procedure DBMetadata.AddColumn(FName, SName: string);
+procedure DBMetadata.AddColumn(aDataField, aCaptionField: string);
 begin
   with Tables[High(Tables)] do begin
     SetLength(Columns, Length(Columns) + 1);
     with Columns[High(Columns)] do begin
-      FirstName := FName;
-      SecondName := SName;
+      DataField := aDataField;
+      CaptionField := aCaptionField;
       Primary := false;
     end;
   end;
 end;
 
-procedure DBMetadata.AddKey(FName, SName, TKey, PKey, FKey: string);
+procedure DBMetadata.AddKey(aDataField, aCaptionField, aListField, aKeyTable,
+  aKeyField: string);
 begin
   with Tables[High(Tables)] do begin
     SetLength(Columns, Length(Columns) + 1);
     with Columns[High(Columns)] do begin
-      FirstName := FName;
-      SecondName := SName;
-      TableKey := TKey;
-      PrmKey := PKey;
-      FrgKey := FKey;
+      DataField := aDataField;
+      CaptionField := aCaptionField;
+      ListField := aListField;
+      KeyTable := aKeyTable;
+      KeyField := aKeyField;
       Primary := true;
     end;
   end;

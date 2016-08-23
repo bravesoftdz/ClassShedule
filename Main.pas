@@ -5,8 +5,7 @@ unit Main;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  ExtCtrls, DBGrids, DbCtrls, Metadata, Catalog, db, sqldb;
+  Classes, Forms, Menus, ExtCtrls, Metadata, Catalog;
 
 type
   TDBMenuItem = class(TMenuItem)
@@ -19,9 +18,10 @@ type
   end;
 
   TClassShedule = class(TForm)
+  published
     BackGround: TImage;
     MainMenu: TMainMenu;
-    Catalog: TMenuItem;
+    CatalogItem: TMenuItem;
     procedure FormCreate(Sender: TObject);
   end;
 
@@ -35,7 +35,7 @@ implementation
 procedure TDBMenuItem.MenuClick(Sender: TObject);
 begin
   if not Checked then begin
-     fModalWin := TDirectory.Create(Self, fTable);
+     fModalWin := TDirectory.CreateCatalog(Self, fTable);
      Checked := true;
   end;
 
@@ -45,8 +45,9 @@ end;
 constructor TDBMenuItem.CreateMenu(TheOwner: TComponent; aTable: TTable);
 begin
   inherited Create(TheOwner);
+  Tag := TheOwner.Tag;
   fTable := aTable;
-  Caption := aTable.ScndName;
+  Caption := aTable.CaptionTable;
   OnClick := @MenuClick;
 end;
 
@@ -54,8 +55,10 @@ procedure TClassShedule.FormCreate(Sender: TObject);
 var
   i: integer;
 begin
-  for i := 0 to High(Mdata.Tables) do
-    Catalog.Add(TDBMenuItem.CreateMenu(Self, Mdata.Tables[i]));
+  for i := 0 to High(Mdata.Tables) do begin
+    Tag := i;
+    CatalogItem.Add(TDBMenuItem.CreateMenu(Self, Mdata.Tables[i]));
+  end;
 end;
 
 end.

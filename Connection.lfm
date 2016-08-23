@@ -1,8 +1,8 @@
 object FireBird: TFireBird
   OldCreateOrder = False
   Height = 154
-  HorizontalOffset = 360
-  VerticalOffset = 356
+  HorizontalOffset = 466
+  VerticalOffset = 138
   Width = 292
   object IBConnect: TIBConnection
     Connected = True

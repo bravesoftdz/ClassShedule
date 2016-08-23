@@ -6,10 +6,11 @@ interface
 
 uses
   Classes, SysUtils, db, sqldb, FileUtil, Forms, Controls, StdCtrls, DbCtrls,
-  NameFrm, Dialogs, Metadata;
+  NameFrm, Metadata;
 
 type
   TBoxFrame = class(TNamedFrame)
+  published
     ListSource: TDataSource;
     DBLComboBox: TDBLookupComboBox;
     FieldName: TLabel;
@@ -22,13 +23,17 @@ implementation
 {$R *.lfm}
 
 constructor TBoxFrame.Create(TheOwner: TWinControl; aColumn: TColumns);
+const
+  CQuary = 'SELECT %s, %s FROM %s';
 begin
   inherited Create(TheOwner);
-  FieldName.Caption := aColumn.SecondName;
-  DBLComboBox.DataField := aColumn.FirstName;
-  DBLComboBox.KeyField := aColumn.FrgKey;
-  DBLComboBox.ListField := aColumn.TableKey;
-  SQLQuery.SQL.Append('SELECT * FROM ' + aColumn.PrmKey);
+  with aColumn do begin
+    FieldName.Caption := CaptionField;
+    DBLComboBox.DataField := DataField;
+    DBLComboBox.KeyField := KeyField;
+    DBLComboBox.ListField := ListField;
+    SQLQuery.SQL.Append(Format(CQuary, [KeyField, ListField, KeyTable]));
+  end;
   SQLQuery.Open;
 end;
 

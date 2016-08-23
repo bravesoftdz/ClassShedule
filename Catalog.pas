@@ -5,77 +5,161 @@ unit Catalog;
 interface
 
 uses
-  Classes, SysUtils, db, sqldb, FileUtil, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, DBGrids, StdCtrls, Buttons, Menus, Metadata, Grids, ButtonPanel,
-  Editor;
+  Classes, db, sqldb, Forms, Controls, Dialogs, ExtCtrls, DBGrids, StdCtrls,
+  Buttons, Metadata, Grids, FileCtrl, DbCtrls, Editor, sysUtils, FilterFrm,
+  MiniFilterFrm;
 
 type
 
   { TDirectory }
 
   TDirectory = class(TForm)
+    MiniFilterFrame1: TMiniFilterFrame;
+    AddFilter: TSpeedButton;
   private
     fTable: TTable;
+    fQuary: string;
   published
+    FilterLabel: TLabel;
+    Panel1: TPanel;
+    OrderField: TFilterComboBox;
+    OrderWay: TFilterComboBox;
+    OrderLabel: TLabel;
     DataSource: TDataSource;
     DBGrid: TDBGrid;
     GridPanel: TPanel;
     ControlPanel: TPanel;
-    Add: TSpeedButton;
-    Edit: TSpeedButton;
-    Delete: TSpeedButton;
-    Serch: TSpeedButton;
-    Renewal: TSpeedButton;
+    AddBtn: TSpeedButton;
+    EditBtn: TSpeedButton;
+    DelBtn: TSpeedButton;
+    SerchBtn: TSpeedButton;
+    RefreshBtn: TSpeedButton;
     SQLQuery: TSQLQuery;
     procedure DBGridDrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
-    procedure AddClick(Sender: TObject);
-    procedure DeleteClick(Sender: TObject);
-    procedure EditClick(Sender: TObject);
-    constructor Create(TheOwner: TComponent; aTable: TTable);
+    procedure AddBtnClick(Sender: TObject);
+    procedure DelBtnClick(Sender: TObject);
+    procedure EditBtnClick(Sender: TObject);
+    procedure RefreshBtnClick(Sender: TObject);
+    procedure SerchBtnClick(Sender: TObject);
+    procedure AddFilterClick(Sender: TObject);
+    constructor CreateCatalog(TheOwner: TComponent; aTable: TTable);
   end;
 
 implementation
 
 {$R *.lfm}
 
-function GetJoinSQL(aTable: TTable): string;
+function GenSelectSQL(aTable: TTable): string;
+var
+  i: integer;
+begin
+  Result := 'SELECT ';
+  with aTable do
+    for i := 0 to High(Columns) do begin
+      if i > 0 then Result += ', ';
+      with Columns[i] do begin
+        Result += NameTable + '.' + DataField;
+        if Primary then
+          Result += ', ' + KeyTable + '.' + ListField;
+      end;
+    end;
+end;
+
+function GenJoinSQL(aTable: TTable): string;
 var
   i: integer;
 begin
   with aTable do begin
-    Result := FrstName;
+    Result := NameTable;
     for i := 0 to High(Columns) do
       with Columns[i] do
         if Primary then
-          Result += ' INNER JOIN ' + PrmKey + ' ON '
-                 + FrstName + '.' + FirstName + ' = '
-                 + PrmKey + '.' + FrgKey;
+          Result += ' INNER JOIN ' + KeyTable + ' ON '
+                 + NameTable + '.' + DataField + ' = '
+                 + KeyTable + '.' + KeyField;
   end;
 end;
 
-constructor TDirectory.Create(TheOwner: TComponent; aTable: TTable);
+function GetOrderFields(aTable: TTable): string;
+const
+  CQuery = '%s|ORDER BY %s.%s|';
 var
   i: integer;
 begin
+  Result := '';
+  with aTable do
+    for i := 0 to High(Columns) do
+      with Columns[i] do
+        if Primary then
+          Result += Format(CQuery, [CaptionField, KeyTable, ListField])
+        else
+          Result += Format(CQuery, [CaptionField, NameTable, DataField]);
+
+  Result := LeftStr(Result, Length(Result) - 1);
+end;
+
+function GenFromSQL(aTable: TTable): string;
+begin
+  Result := 'FROM ' + GenJoinSQL(aTable);
+end;
+
+constructor TDirectory.CreateCatalog(TheOwner: TComponent; aTable: TTable);
+var
+  i: integer;
+begin
+  Tag := TheOwner.Tag;
   inherited Create(TheOwner);
   fTable := aTable;
+
   with fTable do begin
-    Caption := ScndName;
+    Caption := CaptionTable;
     // Подготовка таблицы (установка имен, ширины столбцов)
     for i := 0 to High(Columns) do
-      with DBGrid.Columns.Add do begin
-        if Columns[i].Primary then
-          FieldName := Columns[i].TableKey
+      with DBGrid.Columns.Add, Columns[i] do begin
+        if Primary then
+          FieldName := ListField
         else
-          FieldName := Columns[i].FirstName;
+          FieldName := DataField;
 
-        Title.Caption := Columns[i].SecondName;
+        Title.Caption := CaptionField;
         Width := 10 + Canvas.TextWidth(Title.Caption);
       end;
   end;
-  SQLQuery.SQL.Append('SELECT * FROM ' +  GetJoinSQL(aTable));
+
+  OrderField.Filter := GetOrderFields(aTable);
+  SQLQuery.SQL.Append(GenSelectSQL(atable));
+  SQLQuery.SQL.Append(GenFromSQL(atable));
+  fQuary := SQLQuery.SQL.Text;
+  ShowMessage(fQuary);
   SQLQuery.Open;
+end;
+
+procedure TDirectory.RefreshBtnClick(Sender: TObject);
+begin
+  SQLQuery.SQL.Text := fQuary;
+  SQLQuery.Refresh;
+end;
+
+procedure TDirectory.SerchBtnClick(Sender: TObject);
+var
+  i: integer;
+begin
+  SQLQuery.SQL.Text := fQuary;
+  SQLQuery.SQL.Append('WHERE ' + MiniFilterFrame1.CompileFilter);
+
+  for i := 0 to Panel1.ComponentCount - 1 do
+    if Panel1.Components[i] is TFilterFrame then
+      SQLQuery.SQL.Append((Panel1.Components[i] as TFilterFrame).CompileFilter);
+
+  SQLQuery.SQL.Append(OrderField.Mask + OrderWay.Mask);
+  ShowMessage(SQLQuery.SQL.Text);
+  SQLQuery.Refresh;
+end;
+
+procedure TDirectory.AddFilterClick(Sender: TObject);
+begin
+  TFilterFrame.Create(Panel1);
 end;
 
 procedure TDirectory.DBGridDrawColumnCell(Sender: TObject; const Rect: TRect;
@@ -88,7 +172,7 @@ begin
     Column.Width := MaxWidth;
 end;
 
-procedure TDirectory.DeleteClick(Sender: TObject);
+procedure TDirectory.DelBtnClick(Sender: TObject);
 var
   selected: integer;
 begin
@@ -98,12 +182,12 @@ begin
     TCellEditor.CreateAndDel(Self, fTable, SQLQuery).Free;
 end;
 
-procedure TDirectory.EditClick(Sender: TObject);
+procedure TDirectory.EditBtnClick(Sender: TObject);
 begin
   TCellEditor.CreateAndEdit(Self, fTable, SQLQuery).ShowModal;
 end;
 
-procedure TDirectory.AddClick(Sender: TObject);
+procedure TDirectory.AddBtnClick(Sender: TObject);
 begin
   TCellEditor.CreateAndAdd(Self, fTable, SQLQuery).ShowModal;
 end;
