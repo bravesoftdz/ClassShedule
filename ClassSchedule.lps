@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="90"/>
       </Unit0>
       <Unit1>
         <Filename Value="Main.pas"/>
@@ -22,7 +22,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="39"/>
         <CursorPos X="14" Y="59"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,7 +34,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="8"/>
         <CursorPos X="12" Y="12"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -42,7 +42,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="21" Y="48"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -51,11 +51,10 @@
         <ComponentName Value="Directory"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="79"/>
-        <CursorPos X="29" Y="91"/>
-        <UsageCount Value="84"/>
+        <TopLine Value="136"/>
+        <CursorPos X="34" Y="149"/>
+        <UsageCount Value="86"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -68,7 +67,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="98"/>
         <CursorPos X="3" Y="147"/>
-        <UsageCount Value="73"/>
+        <UsageCount Value="75"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
@@ -79,10 +78,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="27"/>
-        <CursorPos X="38" Y="40"/>
-        <ComponentState Value="1"/>
-        <UsageCount Value="25"/>
+        <CursorPos X="32" Y="8"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
@@ -94,7 +91,7 @@
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="5"/>
         <CursorPos X="47" Y="13"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -106,7 +103,7 @@
         <EditorIndex Value="9"/>
         <TopLine Value="6"/>
         <CursorPos X="3" Y="9"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -118,7 +115,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="16"/>
         <CursorPos X="41" Y="3"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
@@ -127,9 +124,11 @@
         <ComponentName Value="FilterFrame"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="62" Y="20"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="20"/>
+        <CursorPos X="3" Y="36"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit10>
@@ -241,124 +240,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="NameFrm.pas"/>
-        <Caret Line="23" Column="6"/>
-      </Position1>
-      <Position2>
-        <Filename Value="NameFrm.pas"/>
-        <Caret Line="13" Column="17"/>
-      </Position2>
-      <Position3>
-        <Filename Value="NameFrm.pas"/>
-        <Caret Line="22" Column="13"/>
-      </Position3>
-      <Position4>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="6" Column="19"/>
-      </Position4>
-      <Position5>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="13" Column="16" TopLine="3"/>
-      </Position5>
-      <Position6>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="12" Column="26"/>
-      </Position6>
-      <Position7>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="6" Column="26"/>
-      </Position7>
-      <Position8>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="8" Column="21"/>
-      </Position8>
-      <Position9>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="10" Column="30"/>
-      </Position9>
-      <Position10>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="7" Column="35"/>
-      </Position10>
-      <Position11>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="13" Column="14"/>
-      </Position11>
-      <Position12>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="17" Column="14"/>
-      </Position12>
-      <Position13>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="15"/>
-      </Position13>
-      <Position14>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="29" Column="12" TopLine="7"/>
-      </Position14>
-      <Position15>
-        <Filename Value="BoxFrm.pas"/>
-        <Caret Line="4" Column="38"/>
-      </Position15>
-      <Position16>
-        <Filename Value="BoxFrm.pas"/>
-        <Caret Line="11" Column="14" TopLine="8"/>
-      </Position16>
-      <Position17>
-        <Filename Value="BoxFrm.pas"/>
-        <Caret Line="22" Column="22" TopLine="8"/>
-      </Position17>
-      <Position18>
-        <Filename Value="BoxFrm.pas"/>
-        <Caret Line="12" Column="13" TopLine="8"/>
-      </Position18>
-      <Position19>
-        <Filename Value="EditFrm.pas"/>
-        <Caret Line="11" Column="33" TopLine="2"/>
-      </Position19>
-      <Position20>
-        <Filename Value="BoxFrm.pas"/>
-        <Caret Line="12" Column="32"/>
-      </Position20>
-      <Position21>
         <Filename Value="FilterFrm.pas"/>
         <Caret Line="29" Column="48" TopLine="8"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="157" Column="42" TopLine="97"/>
+      </Position2>
+      <Position3>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="22" TopLine="4"/>
+      </Position3>
+      <Position4>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="27" TopLine="4"/>
+      </Position4>
+      <Position5>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="35" Column="9" TopLine="14"/>
+      </Position5>
+      <Position6>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="14" Column="4" TopLine="14"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="153" Column="40" TopLine="147"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="154" TopLine="140"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="153" Column="26" TopLine="140"/>
+      </Position9>
+      <Position10>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="27" Column="17" TopLine="11"/>
+      </Position10>
+      <Position11>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="20" Column="62"/>
+      </Position11>
+      <Position12>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="24" Column="62"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="91" Column="29" TopLine="79"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="90" Column="29" TopLine="78"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="91" Column="29" TopLine="79"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="90" Column="29" TopLine="78"/>
+      </Position16>
+      <Position17>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="23" Column="62"/>
+      </Position17>
+      <Position18>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="22" Column="62"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="91" Column="29" TopLine="79"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="90" Column="29" TopLine="78"/>
+      </Position20>
+      <Position21>
+        <Filename Value="MiniFilterFrm.pas"/>
+        <Caret Line="40" Column="38" TopLine="27"/>
       </Position21>
       <Position22>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="157" Column="42" TopLine="97"/>
+        <Caret Line="148" Column="34" TopLine="135"/>
       </Position22>
       <Position23>
         <Filename Value="FilterFrm.pas"/>
-        <Caret Line="22" TopLine="4"/>
+        <Caret Line="23" Column="62"/>
       </Position23>
       <Position24>
         <Filename Value="FilterFrm.pas"/>
-        <Caret Line="27" TopLine="4"/>
+        <Caret Line="22" Column="62"/>
       </Position24>
       <Position25>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="35" Column="9" TopLine="14"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="149" Column="34" TopLine="136"/>
       </Position25>
       <Position26>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="14" Column="4" TopLine="14"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="148" Column="34" TopLine="135"/>
       </Position26>
       <Position27>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="153" Column="40" TopLine="147"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="23" Column="62"/>
       </Position27>
       <Position28>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="154" TopLine="140"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="22" Column="62"/>
       </Position28>
       <Position29>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="153" Column="26" TopLine="140"/>
+        <Caret Line="148" Column="34" TopLine="135"/>
       </Position29>
       <Position30>
         <Filename Value="FilterFrm.pas"/>
-        <Caret Line="27" Column="17" TopLine="11"/>
+        <Caret Line="24" Column="62"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

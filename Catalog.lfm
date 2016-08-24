@@ -1,26 +1,28 @@
 object Directory: TDirectory
-  Left = 161
-  Height = 574
-  Top = 94
-  Width = 650
+  Left = 192
+  Height = 400
+  Top = 243
+  Width = 577
   Caption = 'Directory'
-  ClientHeight = 574
-  ClientWidth = 650
+  ClientHeight = 400
+  ClientWidth = 577
+  Constraints.MinHeight = 400
+  Constraints.MinWidth = 577
   LCLVersion = '1.6.0.4'
   object GridPanel: TPanel
     Left = 0
-    Height = 459
+    Height = 292
     Top = 0
-    Width = 650
+    Width = 577
     Align = alClient
-    ClientHeight = 459
-    ClientWidth = 650
+    ClientHeight = 292
+    ClientWidth = 577
     TabOrder = 0
     object DBGrid: TDBGrid
       Left = 1
-      Height = 457
+      Height = 290
       Top = 1
-      Width = 648
+      Width = 575
       Align = alClient
       Color = clWindow
       Columns = <>
@@ -32,20 +34,21 @@ object Directory: TDirectory
   object ControlPanel: TPanel
     Tag = 1
     Left = 0
-    Height = 115
-    Top = 459
-    Width = 650
+    Height = 108
+    Top = 292
+    Width = 577
     Align = alBottom
     AutoSize = True
-    ClientHeight = 115
-    ClientWidth = 650
+    ClientHeight = 108
+    ClientWidth = 577
     TabOrder = 1
     object AddBtn: TSpeedButton
-      Left = 1
+      Left = 8
       Height = 36
-      Top = 1
+      Top = 8
       Width = 36
       AutoSize = True
+      BorderSpacing.Around = 7
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         2000000000000010000064000000640000000000000000000000000000000000
@@ -181,11 +184,12 @@ object Directory: TDirectory
       OnClick = AddBtnClick
     end
     object EditBtn: TSpeedButton
-      Left = 48
+      Left = 55
       Height = 36
-      Top = 1
+      Top = 8
       Width = 36
       AutoSize = True
+      BorderSpacing.Around = 7
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         2000000000000010000064000000640000000000000000000000000000000000
@@ -321,11 +325,12 @@ object Directory: TDirectory
       OnClick = EditBtnClick
     end
     object DelBtn: TSpeedButton
-      Left = 96
+      Left = 102
       Height = 36
-      Top = 1
+      Top = 8
       Width = 36
       AutoSize = True
+      BorderSpacing.Around = 7
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         2000000000000010000064000000640000000000000000000000000000000000
@@ -461,11 +466,12 @@ object Directory: TDirectory
       OnClick = DelBtnClick
     end
     object SerchBtn: TSpeedButton
-      Left = 144
+      Left = 151
       Height = 36
-      Top = 1
+      Top = 8
       Width = 36
       AutoSize = True
+      BorderSpacing.Around = 7
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         2000000000000010000064000000640000000000000000000000000000000000
@@ -601,11 +607,12 @@ object Directory: TDirectory
       OnClick = SerchBtnClick
     end
     object RefreshBtn: TSpeedButton
-      Left = 192
+      Left = 199
       Height = 36
-      Top = 1
+      Top = 8
       Width = 36
       AutoSize = True
+      BorderSpacing.Around = 7
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         2000000000000010000064000000640000000000000000000000000000000000
@@ -741,66 +748,50 @@ object Directory: TDirectory
       OnClick = RefreshBtnClick
     end
     object OrderLabel: TLabel
-      Left = 13
+      Left = 11
       Height = 15
-      Top = 53
+      Top = 57
       Width = 71
       Caption = 'Сортировать'
       ParentColor = False
     end
     object OrderWay: TFilterComboBox
-      Left = 96
+      Left = 93
       Height = 23
-      Top = 51
-      Width = 146
+      Top = 54
+      Width = 160
       Filter = 'Возрастание| ASC|Убывание| DESC'
       ItemIndex = 0
       TabOrder = 0
     end
     object OrderField: TFilterComboBox
-      Left = 248
+      Left = 261
       Height = 23
-      Top = 51
-      Width = 324
+      Top = 54
+      Width = 273
       TabOrder = 1
     end
     object FilterLabel: TLabel
-      Left = 13
+      Left = 11
       Height = 15
-      Top = 87
+      Top = 85
       Width = 71
       Caption = 'Фильтровать'
       ParentColor = False
     end
-    object Panel1: TPanel
+    object FilterPanel: TPanel
       Left = 1
       Height = 0
-      Top = 114
+      Top = 107
       Width = 0
       AutoSize = True
-      Caption = 'Panel1'
+      BevelOuter = bvNone
       TabOrder = 2
     end
-    inline MiniFilterFrame1: TMiniFilterFrame
-      Left = 88
-      Top = 76
-      Width = 456
-      ClientWidth = 456
-      TabOrder = 3
-      inherited FilterField: TFilterComboBox
-        Width = 160
-      end
-      inherited FilterWay: TFilterComboBox
-        Left = 176
-      end
-      inherited FilterEdit: TEdit
-        Left = 248
-      end
-    end
     object AddFilter: TSpeedButton
-      Left = 544
+      Left = 542
       Height = 28
-      Top = 81
+      Top = 79
       Width = 28
       AutoSize = True
       Glyph.Data = {
@@ -880,6 +871,26 @@ object Directory: TDirectory
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       OnClick = AddFilterClick
+    end
+    inline MiniFilterFrame1: TMiniFilterFrame
+      Left = 93
+      Height = 23
+      Top = 82
+      Width = 441
+      ClientHeight = 23
+      ClientWidth = 441
+      TabOrder = 3
+      DesignLeft = 70
+      DesignTop = 148
+      inherited FilterField: TFilterComboBox
+        Left = 72
+      end
+      inherited FilterWay: TFilterComboBox
+        Left = 0
+      end
+      inherited FilterEdit: TEdit
+        Width = 201
+      end
     end
   end
   object DataSource: TDataSource

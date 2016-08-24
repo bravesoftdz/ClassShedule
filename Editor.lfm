@@ -1,7 +1,7 @@
 object CellEditor: TCellEditor
-  Left = 276
+  Left = 632
   Height = 304
-  Top = 344
+  Top = 245
   Width = 400
   AutoSize = True
   BorderStyle = bsSingle

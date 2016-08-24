@@ -14,14 +14,14 @@ type
   { TDirectory }
 
   TDirectory = class(TForm)
-    MiniFilterFrame1: TMiniFilterFrame;
     AddFilter: TSpeedButton;
+    MiniFilterFrame1: TMiniFilterFrame;
   private
     fTable: TTable;
     fQuary: string;
   published
     FilterLabel: TLabel;
-    Panel1: TPanel;
+    FilterPanel: TPanel;
     OrderField: TFilterComboBox;
     OrderWay: TFilterComboBox;
     OrderLabel: TLabel;
@@ -148,9 +148,9 @@ begin
   SQLQuery.SQL.Text := fQuary;
   SQLQuery.SQL.Append('WHERE ' + MiniFilterFrame1.CompileFilter);
 
-  for i := 0 to Panel1.ComponentCount - 1 do
-    if Panel1.Components[i] is TFilterFrame then
-      SQLQuery.SQL.Append((Panel1.Components[i] as TFilterFrame).CompileFilter);
+  for i := 0 to FilterPanel.ComponentCount - 1 do
+    if FilterPanel.Components[i] is TFilterFrame then
+      SQLQuery.SQL.Append((FilterPanel.Components[i] as TFilterFrame).CompileFilter);
 
   SQLQuery.SQL.Append(OrderField.Mask + OrderWay.Mask);
   ShowMessage(SQLQuery.SQL.Text);
@@ -159,7 +159,7 @@ end;
 
 procedure TDirectory.AddFilterClick(Sender: TObject);
 begin
-  TFilterFrame.Create(Panel1);
+  TFilterFrame.Create(FilterPanel);
 end;
 
 procedure TDirectory.DBGridDrawColumnCell(Sender: TObject; const Rect: TRect;

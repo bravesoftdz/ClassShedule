@@ -1,45 +1,29 @@
 inherited FilterFrame: TFilterFrame
-  Height = 39
-  Width = 577
+  Height = 237
+  Width = 667
   Align = alBottom
-  ClientHeight = 39
-  ClientWidth = 577
-  DesignLeft = 162
-  DesignTop = 589
-  inline MiniFilterFrame1: TMiniFilterFrame[0]
-    Left = 80
-    Width = 464
-    ClientWidth = 464
-    DesignLeft = 46
-    DesignTop = 91
-    inherited FilterField: TFilterComboBox
-      Left = 16
-      Width = 160
-    end
-    inherited FilterWay: TFilterComboBox
-      Left = 184
-    end
-    inherited FilterEdit: TEdit
-      Left = 256
-    end
-  end
-  object FilterVar: TFilterComboBox[1]
-    Left = 8
+  AutoSize = True
+  ClientHeight = 237
+  ClientWidth = 667
+  OnClick = FrameClick
+  DesignLeft = 219
+  DesignTop = 433
+  object FilterVar: TFilterComboBox[0]
+    Left = 12
     Height = 23
-    Top = 8
-    Width = 80
-    BorderSpacing.Around = 7
+    Top = 3
+    Width = 72
+    BorderSpacing.Left = 12
     Filter = 'И|AND |ИЛИ|OR '
     ItemIndex = 0
-    TabOrder = 1
+    TabOrder = 0
   end
-  object RemoveFilter: TSpeedButton[2]
-    Left = 544
+  object RemoveFilter: TSpeedButton[1]
+    Left = 541
     Height = 28
-    Top = 5
+    Top = 0
     Width = 28
     AutoSize = True
-    BorderSpacing.Around = 7
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
       2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -117,5 +101,17 @@ inherited FilterFrame: TFilterFrame
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
     }
     OnClick = RemoveFilterClick
+  end
+  inline MiniFilterFrame1: TMiniFilterFrame[2]
+    Left = 92
+    Height = 23
+    Top = 3
+    Width = 441
+    ClientHeight = 23
+    ClientWidth = 441
+    TabOrder = 1
+    inherited FilterEdit: TEdit
+      Width = 201
+    end
   end
 end
