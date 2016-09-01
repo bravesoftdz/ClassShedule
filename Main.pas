@@ -11,10 +11,9 @@ type
   TDBMenuItem = class(TMenuItem)
   private
     fModalWin: TDirectory;
-    fTable: TTable;
   public
     procedure MenuClick(Sender: TObject);
-    constructor CreateMenu(TheOwner: TComponent; aTable: TTable);
+    constructor CreateMenu(TheOwner: TComponent);
   end;
 
   TClassShedule = class(TForm)
@@ -35,19 +34,18 @@ implementation
 procedure TDBMenuItem.MenuClick(Sender: TObject);
 begin
   if not Checked then begin
-     fModalWin := TDirectory.CreateCatalog(Self, fTable);
-     Checked := true;
+     fModalWin := TDirectory.CreateCatalog(Self);
+     Checked := True;
   end;
 
   fModalWin.ShowOnTop;
 end;
 
-constructor TDBMenuItem.CreateMenu(TheOwner: TComponent; aTable: TTable);
+constructor TDBMenuItem.CreateMenu(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   Tag := TheOwner.Tag;
-  fTable := aTable;
-  Caption := aTable.CaptionTable;
+  Caption := Mdata.Tables[Tag].CaptionTable;
   OnClick := @MenuClick;
 end;
 
@@ -57,7 +55,7 @@ var
 begin
   for i := 0 to High(Mdata.Tables) do begin
     Tag := i;
-    CatalogItem.Add(TDBMenuItem.CreateMenu(Self, Mdata.Tables[i]));
+    CatalogItem.Add(TDBMenuItem.CreateMenu(Self));
   end;
 end;
 

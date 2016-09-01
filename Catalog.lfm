@@ -8,6 +8,7 @@ object Directory: TDirectory
   ClientWidth = 577
   Constraints.MinHeight = 400
   Constraints.MinWidth = 577
+  OnClose = FormClose
   LCLVersion = '1.6.0.4'
   object GridPanel: TPanel
     Left = 0

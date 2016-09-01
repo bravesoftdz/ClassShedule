@@ -7,19 +7,16 @@ interface
 uses
   Classes, db, sqldb, Forms, Controls, Dialogs, ExtCtrls, DBGrids, StdCtrls,
   Buttons, Metadata, Grids, FileCtrl, DbCtrls, Editor, sysUtils, FilterFrm,
-  MiniFilterFrm;
+  MiniFilterFrm, Menus;
 
 type
-
-  { TDirectory }
-
   TDirectory = class(TForm)
-    AddFilter: TSpeedButton;
-    MiniFilterFrame1: TMiniFilterFrame;
   private
     fTable: TTable;
     fQuary: string;
   published
+    AddFilter: TSpeedButton;
+    MiniFilterFrame1: TMiniFilterFrame;
     FilterLabel: TLabel;
     FilterPanel: TPanel;
     OrderField: TFilterComboBox;
@@ -37,13 +34,14 @@ type
     SQLQuery: TSQLQuery;
     procedure DBGridDrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure AddBtnClick(Sender: TObject);
     procedure DelBtnClick(Sender: TObject);
     procedure EditBtnClick(Sender: TObject);
     procedure RefreshBtnClick(Sender: TObject);
     procedure SerchBtnClick(Sender: TObject);
     procedure AddFilterClick(Sender: TObject);
-    constructor CreateCatalog(TheOwner: TComponent; aTable: TTable);
+    constructor CreateCatalog(TheOwner: TComponent);
   end;
 
 implementation
@@ -104,13 +102,13 @@ begin
   Result := 'FROM ' + GenJoinSQL(aTable);
 end;
 
-constructor TDirectory.CreateCatalog(TheOwner: TComponent; aTable: TTable);
+constructor TDirectory.CreateCatalog(TheOwner: TComponent);
 var
   i: integer;
 begin
   Tag := TheOwner.Tag;
   inherited Create(TheOwner);
-  fTable := aTable;
+  fTable := Mdata.Tables[Tag];
 
   with fTable do begin
     Caption := CaptionTable;
@@ -127,9 +125,9 @@ begin
       end;
   end;
 
-  OrderField.Filter := GetOrderFields(aTable);
-  SQLQuery.SQL.Append(GenSelectSQL(atable));
-  SQLQuery.SQL.Append(GenFromSQL(atable));
+  OrderField.Filter := GetOrderFields(fTable);
+  SQLQuery.SQL.Append(GenSelectSQL(fTable));
+  SQLQuery.SQL.Append(GenFromSQL(fTable));
   fQuary := SQLQuery.SQL.Text;
   ShowMessage(fQuary);
   SQLQuery.Open;
@@ -160,6 +158,12 @@ end;
 procedure TDirectory.AddFilterClick(Sender: TObject);
 begin
   TFilterFrame.Create(FilterPanel);
+end;
+
+procedure TDirectory.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  (Owner as TMenuItem).Checked := False;
+  CloseAction := caFree;
 end;
 
 procedure TDirectory.DBGridDrawColumnCell(Sender: TObject; const Rect: TRect;

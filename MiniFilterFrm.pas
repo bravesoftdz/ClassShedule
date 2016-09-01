@@ -10,6 +10,7 @@ uses
 
 type
   TMiniFilterFrame = class(TFrame)
+  published
     FilterEdit: TEdit;
     FilterWay: TFilterComboBox;
     FilterField: TFilterComboBox;

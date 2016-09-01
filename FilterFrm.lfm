@@ -5,9 +5,8 @@ inherited FilterFrame: TFilterFrame
   AutoSize = True
   ClientHeight = 237
   ClientWidth = 667
-  OnClick = FrameClick
-  DesignLeft = 219
-  DesignTop = 433
+  DesignLeft = 58
+  DesignTop = 215
   object FilterVar: TFilterComboBox[0]
     Left = 12
     Height = 23

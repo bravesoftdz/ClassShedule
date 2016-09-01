@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="25">
+    <Units Count="26">
       <Unit0>
         <Filename Value="ClassSchedule.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="91"/>
       </Unit0>
       <Unit1>
         <Filename Value="Main.pas"/>
@@ -20,9 +20,9 @@
         <ComponentName Value="ClassShedule"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="39"/>
-        <CursorPos X="14" Y="59"/>
-        <UsageCount Value="90"/>
+        <TopLine Value="25"/>
+        <CursorPos X="21" Y="38"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -33,16 +33,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="8"/>
+        <TopLine Value="3"/>
         <CursorPos X="12" Y="12"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="Metadata.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <CursorPos X="21" Y="48"/>
-        <UsageCount Value="90"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="16"/>
+        <CursorPos X="33" Y="9"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -51,10 +53,11 @@
         <ComponentName Value="Directory"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="136"/>
-        <CursorPos X="34" Y="149"/>
-        <UsageCount Value="86"/>
+        <TopLine Value="154"/>
+        <CursorPos X="36" Y="165"/>
+        <UsageCount Value="87"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -64,10 +67,10 @@
         <ComponentName Value="CellEditor"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="98"/>
-        <CursorPos X="3" Y="147"/>
-        <UsageCount Value="75"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="107"/>
+        <CursorPos X="39" Y="111"/>
+        <UsageCount Value="76"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
@@ -77,9 +80,10 @@
         <ComponentName Value="MiniFilterFrame"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="32" Y="8"/>
-        <UsageCount Value="27"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="5"/>
+        <CursorPos X="12" Y="13"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
@@ -89,10 +93,12 @@
         <ComponentName Value="NamedFrame"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="4"/>
         <CursorPos X="47" Y="13"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="EditFrm.pas"/>
@@ -101,9 +107,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="9"/>
-        <TopLine Value="6"/>
+        <TopLine Value="9"/>
         <CursorPos X="3" Y="9"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -113,9 +119,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="16"/>
         <CursorPos X="41" Y="3"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
@@ -124,22 +129,30 @@
         <ComponentName Value="FilterFrame"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="20"/>
-        <CursorPos X="3" Y="36"/>
-        <UsageCount Value="24"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="2"/>
+        <CursorPos X="3" Y="13"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit10>
       <Unit11>
+        <Filename Value="Schedule.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="13"/>
+        <UsageCount Value="20"/>
+      </Unit11>
+      <Unit12>
         <Filename Value="namedfrm.pas"/>
         <UnitName Value="NamedFrm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="20"/>
         <UsageCount Value="25"/>
-      </Unit11>
-      <Unit12>
+      </Unit12>
+      <Unit13>
         <Filename Value="BoxFrame.pas"/>
         <ComponentName Value="Frame1"/>
         <HasResources Value="True"/>
@@ -148,217 +161,205 @@
         <TopLine Value="4"/>
         <CursorPos X="41" Y="5"/>
         <UsageCount Value="19"/>
-      </Unit12>
-      <Unit13>
+      </Unit13>
+      <Unit14>
         <Filename Value="C:\Software\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3655"/>
         <CursorPos Y="3668"/>
         <UsageCount Value="10"/>
-      </Unit13>
-      <Unit14>
+      </Unit14>
+      <Unit15>
         <Filename Value="C:\Software\lazarus\components\lazutils\lazutf8.pas"/>
         <UnitName Value="LazUTF8"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3150"/>
         <CursorPos Y="3163"/>
         <UsageCount Value="7"/>
-      </Unit14>
-      <Unit15>
+      </Unit15>
+      <Unit16>
         <Filename Value="C:\Software\lazarus\lcl\include\customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="387"/>
         <CursorPos Y="455"/>
         <UsageCount Value="7"/>
-      </Unit15>
-      <Unit16>
+      </Unit16>
+      <Unit17>
         <Filename Value="C:\Software\lazarus\lcl\graphics.pp"/>
         <UnitName Value="Graphics"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1199"/>
         <CursorPos X="44" Y="1210"/>
         <UsageCount Value="9"/>
-      </Unit16>
-      <Unit17>
+      </Unit17>
+      <Unit18>
         <Filename Value="C:\Software\lazarus\lcl\dbgrids.pas"/>
         <UnitName Value="DBGrids"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="351"/>
         <CursorPos X="20" Y="254"/>
         <UsageCount Value="8"/>
-      </Unit17>
-      <Unit18>
+      </Unit18>
+      <Unit19>
         <Filename Value="C:\Software\lazarus\lcl\stdctrls.pp"/>
         <UnitName Value="StdCtrls"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1484"/>
         <CursorPos X="26" Y="1497"/>
         <UsageCount Value="11"/>
-      </Unit18>
-      <Unit19>
+      </Unit19>
+      <Unit20>
         <Filename Value="C:\Software\lazarus\lcl\dbctrls.pp"/>
         <UnitName Value="DbCtrls"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1529"/>
         <CursorPos X="29" Y="1513"/>
         <UsageCount Value="11"/>
-      </Unit19>
-      <Unit20>
+      </Unit20>
+      <Unit21>
         <Filename Value="EditFrm.lfm"/>
         <EditorIndex Value="8"/>
         <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit20>
-      <Unit21>
+      </Unit21>
+      <Unit22>
         <Filename Value="BoxFrm.lfm"/>
         <EditorIndex Value="4"/>
         <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit21>
-      <Unit22>
+      </Unit22>
+      <Unit23>
         <Filename Value="C:\Software\lazarus\lcl\lresources.pp"/>
         <UnitName Value="LResources"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3148"/>
         <CursorPos Y="3163"/>
         <UsageCount Value="9"/>
-      </Unit22>
-      <Unit23>
+      </Unit23>
+      <Unit24>
         <Filename Value="C:\Software\lazarus\lcl\include\dblookup.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="355"/>
         <CursorPos Y="367"/>
         <UsageCount Value="10"/>
-      </Unit23>
-      <Unit24>
+      </Unit24>
+      <Unit25>
         <Filename Value="C:\Software\lazarus\lcl\include\menuitem.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="405"/>
         <CursorPos Y="418"/>
         <UsageCount Value="10"/>
-      </Unit24>
+      </Unit25>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="FilterFrm.pas"/>
-        <Caret Line="29" Column="48" TopLine="8"/>
+        <Caret Line="27" Column="17" TopLine="11"/>
       </Position1>
       <Position2>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="157" Column="42" TopLine="97"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="20" Column="62"/>
       </Position2>
       <Position3>
         <Filename Value="FilterFrm.pas"/>
-        <Caret Line="22" TopLine="4"/>
+        <Caret Line="24" Column="62"/>
       </Position3>
       <Position4>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="27" TopLine="4"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="91" Column="29" TopLine="79"/>
       </Position4>
       <Position5>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="35" Column="9" TopLine="14"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="90" Column="29" TopLine="78"/>
       </Position5>
       <Position6>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="14" Column="4" TopLine="14"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="91" Column="29" TopLine="79"/>
       </Position6>
       <Position7>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="153" Column="40" TopLine="147"/>
+        <Caret Line="90" Column="29" TopLine="78"/>
       </Position7>
       <Position8>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="154" TopLine="140"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="23" Column="62"/>
       </Position8>
       <Position9>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="153" Column="26" TopLine="140"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="22" Column="62"/>
       </Position9>
       <Position10>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="27" Column="17" TopLine="11"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="91" Column="29" TopLine="79"/>
       </Position10>
       <Position11>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="20" Column="62"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="90" Column="29" TopLine="78"/>
       </Position11>
       <Position12>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="24" Column="62"/>
+        <Filename Value="MiniFilterFrm.pas"/>
+        <Caret Line="40" Column="38" TopLine="27"/>
       </Position12>
       <Position13>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="91" Column="29" TopLine="79"/>
+        <Caret Line="148" Column="34" TopLine="135"/>
       </Position13>
       <Position14>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="90" Column="29" TopLine="78"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="23" Column="62"/>
       </Position14>
       <Position15>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="91" Column="29" TopLine="79"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="22" Column="62"/>
       </Position15>
       <Position16>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="90" Column="29" TopLine="78"/>
+        <Caret Line="149" Column="34" TopLine="136"/>
       </Position16>
       <Position17>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="23" Column="62"/>
+        <Filename Value="Catalog.pas"/>
+        <Caret Line="148" Column="34" TopLine="135"/>
       </Position17>
       <Position18>
         <Filename Value="FilterFrm.pas"/>
-        <Caret Line="22" Column="62"/>
+        <Caret Line="23" Column="62"/>
       </Position18>
       <Position19>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="91" Column="29" TopLine="79"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="22" Column="62"/>
       </Position19>
       <Position20>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="90" Column="29" TopLine="78"/>
+        <Caret Line="148" Column="34" TopLine="135"/>
       </Position20>
       <Position21>
-        <Filename Value="MiniFilterFrm.pas"/>
-        <Caret Line="40" Column="38" TopLine="27"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="24" Column="62"/>
       </Position21>
       <Position22>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="148" Column="34" TopLine="135"/>
+        <Caret Line="43" Column="51" TopLine="31"/>
       </Position22>
       <Position23>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="23" Column="62"/>
+        <Filename Value="Main.pas"/>
+        <Caret Line="42" Column="24" TopLine="8"/>
       </Position23>
       <Position24>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="22" Column="62"/>
+        <Filename Value="Main.pas"/>
+        <Caret Line="48" Column="30" TopLine="33"/>
       </Position24>
       <Position25>
-        <Filename Value="Catalog.pas"/>
-        <Caret Line="149" Column="34" TopLine="136"/>
+        <Filename Value="FilterFrm.pas"/>
+        <Caret Line="30" TopLine="15"/>
       </Position25>
       <Position26>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="148" Column="34" TopLine="135"/>
+        <Caret Line="9" Column="43"/>
       </Position26>
       <Position27>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="23" Column="62"/>
-      </Position27>
-      <Position28>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="22" Column="62"/>
-      </Position28>
-      <Position29>
         <Filename Value="Catalog.pas"/>
-        <Caret Line="148" Column="34" TopLine="135"/>
-      </Position29>
-      <Position30>
-        <Filename Value="FilterFrm.pas"/>
-        <Caret Line="24" Column="62"/>
-      </Position30>
+        <Caret Line="165" Column="22" TopLine="154"/>
+      </Position27>
     </JumpHistory>
   </ProjectSession>
   <Debugging>

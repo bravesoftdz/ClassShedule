@@ -9,16 +9,12 @@ uses
   MiniFilterFrm, NameFrm;
 
 type
-
-  { TFilterFrame }
-
   TFilterFrame = class(TNamedFrame)
   published
     FilterVar: TFilterComboBox;
     MiniFilterFrame1: TMiniFilterFrame;
     RemoveFilter: TSpeedButton;
     function CompileFilter: string;
-    procedure FrameClick(Sender: TObject);
     procedure RemoveFilterClick(Sender: TObject);
   end;
 
@@ -29,11 +25,6 @@ implementation
 function TFilterFrame.CompileFilter: string;
 begin
   Result := FilterVar.Mask + MiniFilterFrame1.CompileFilter;
-end;
-
-procedure TFilterFrame.FrameClick(Sender: TObject);
-begin
-
 end;
 
 procedure TFilterFrame.RemoveFilterClick(Sender: TObject);
