@@ -348,16 +348,7 @@ BEGIN
 		FROM SCHEDULES
 		WHERE NEW.TEACHERID = SCHEDULES.TEACHERID
 			AND NEW.WEEKDAYID = SCHEDULES.WEEKDAYID
-			    DataSource: TDataSource;
-    DBGrid: TDBGrid;
-    GridPanel: TPanel;
-    ControlPanel: TPanel;
-    Add: TSpeedButton;
-    Edit: TSpeedButton;
-    Delete: TSpeedButton;
-    Serch: TSpeedButton;
-    Renewal: TSpeedButton;
-    SQLQuery: TSQLQuery;AND NEW.PAIRID = SCHEDULES.PAIRID
+			AND NEW.PAIRID = SCHEDULES.PAIRID
 		) > 1)
 	THEN
 		IF ((ID_NEW = 0)
